@@ -1,7 +1,7 @@
 {
-  "name": "team-carbon-ui",
+  "name": "tteam-carbon-ui-example",
   "homepage": ".",
-  "version": "1.0.1",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
