@@ -7,3 +7,17 @@
   font-size: 2em;
   text-align: center;
 }
+.MainButton{
+  width: 290px; 
+height: 60px; 
+font-size: 20px; 
+line-height: 30px;
+background-color:#01bfbd;
+color:white;
+border:0px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+cursor: pointer;
+}
+.MainButton:hover{
+  background-color: #039698;
+}

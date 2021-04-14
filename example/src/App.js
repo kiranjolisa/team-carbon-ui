@@ -1,10 +1,20 @@
 import React from 'react'
 
-import { ExampleComponent } from 'team-carbon-ui'
+import { ExampleComponent,ProgressBar,MainButton } from 'team-carbon-ui'
 import 'team-carbon-ui/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  const [completed, setCompleted] = React.useState(0);
+
+React.useEffect(() => {
+  setInterval(() => setCompleted(Math.floor(Math.random() * 100) + 1), 2000);
+}, []);
+  return (
+    <>
+  <ProgressBar sliderColor = "#01bfbd" completed = {completed}/>
+  <ExampleComponent text="It's working 😄" />
+  <MainButton onClick = {() => alert('Nothing')}>Hi there!</MainButton>
+  </>);
 }
 
 export default App
