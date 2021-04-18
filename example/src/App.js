@@ -15,7 +15,6 @@ import {
   ModalBodyDiv, 
   ModalButton, 
   ModalHeader,
-  ModalFooter,
   ModalTextDiv, 
   CloseSpan,
   SideBar,
@@ -54,7 +53,6 @@ React.useEffect(() => {
     <ModalHeader>Header Sec</ModalHeader>
       <ModalTextDiv>Something here</ModalTextDiv>
       <ModalButton>Nothing Happens</ModalButton>
-      <ModalFooter>Footer Sec</ModalFooter>
     </ModalBodyDiv>
   </ModalBox>
   </>): (<>
