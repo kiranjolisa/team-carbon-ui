@@ -17,7 +17,9 @@ import {
   ModalHeader,
   ModalFooter,
   ModalTextDiv, 
-  CloseSpan } from 'team-carbon-ui'
+  CloseSpan,
+  SideBar,
+  SideBarItem } from 'team-carbon-ui'
 import 'team-carbon-ui/dist/index.css'
 
 const App = () => {
@@ -72,6 +74,10 @@ React.useEffect(() => {
   <PayButton>Pay &#8377;XXXX</PayButton>
   <br/><br/>
   <MainButton onClick = {() => {setShowModal(true)}}>Show Modal View</MainButton>
+  <br/><br/>
+  <SideBar>
+  <SideBarItem children = {["Item1", "Item2", "Item3", "Item4"]} />
+  </SideBar>
   </>));
 }
 
