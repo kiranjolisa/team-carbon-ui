@@ -1,6 +1,6 @@
 {
   "name": "team-carbon-ui",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A custom UI library built for modular usage of styling components in React app.",
   "author": "kiranjolisa",
   "license": "MIT",
