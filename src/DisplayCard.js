@@ -43,8 +43,7 @@ export const DisplayCard = ({
     lastDonation = 7,
     daysLeft = 21,
  supportersCount = 13997,
-    id,
-    onClick})=> {
+    id})=> {
         const extractFirstLetter = (AuthorName) =>{
             let splitNames = AuthorName.split(" ");
             return splitNames[0][0] + splitNames[1][0];
@@ -53,7 +52,7 @@ export const DisplayCard = ({
             achievedPercent = 100;
         }
     return (
-        <CardContainer onClick = {() => {onClick(id)}}>
+        <CardContainer>
             <img src = {imageURL} width = "100%" height = "170px" alt = {title}
             style = {{ borderRadius: "20px" }}/>
             <CardTitle>{title}</CardTitle>
