@@ -49,5 +49,9 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "classnames": "^2.3.1",
+    "styled-components": "^5.2.3"
+  }
 }

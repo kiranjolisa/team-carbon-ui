@@ -1,6 +1,12 @@
 import React from 'react'
 
-import { ExampleComponent,ProgressBar,MainButton } from 'team-carbon-ui'
+import {
+  ProgressBar, 
+  ProgressBarThin,
+  MainButton, 
+  PaymentFailureAnime, 
+  PaymentSuccessAnime,
+DisplayCard } from 'team-carbon-ui'
 import 'team-carbon-ui/dist/index.css'
 
 const App = () => {
@@ -11,9 +17,14 @@ React.useEffect(() => {
 }, []);
   return (
     <>
-  <ProgressBar sliderColor = "#01bfbd" completed = {completed}/>
-  <ExampleComponent text="It's working 😄" />
+  <ProgressBar sliderColor = "#01bfbd" completed = {completed} />
   <MainButton onClick = {() => alert('Nothing')}>Hi there!</MainButton>
+  <br/><br/>
+  <ProgressBarThin sliderColor = "#01bfbd" completed = {completed} />
+  <br/>
+  <DisplayCard />
+  <PaymentSuccessAnime/>
+  <PaymentFailureAnime/>
   </>);
 }
 
