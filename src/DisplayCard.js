@@ -4,9 +4,10 @@ import styled from "styled-components";
 
 const CardContainer = styled.div`
 float:left;
-height:83vh;
-width: 21.8vw;
+height:78vh;
+width: 21vw;
 border-radius:20px;
+padding-bottom:2%;
 margin:10px;
 &:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -43,8 +44,7 @@ export const DisplayCard = ({
     daysLeft = 21,
  supportersCount = 13997,
     id,
-openPaymentModal,
-toggleOpenPaymentModal})=> {
+    onClick})=> {
         const extractFirstLetter = (AuthorName) =>{
             let splitNames = AuthorName.split(" ");
             return splitNames[0][0] + splitNames[1][0];
@@ -53,7 +53,7 @@ toggleOpenPaymentModal})=> {
             achievedPercent = 100;
         }
     return (
-        <CardContainer onClick = {() => {toggleOpenPaymentModal()}}>
+        <CardContainer onClick = {() => {onClick(id)}}>
             <img src = {imageURL} width = "100%" height = "170px" alt = {title}
             style = {{ borderRadius: "20px" }}/>
             <CardTitle>{title}</CardTitle>
@@ -75,10 +75,10 @@ toggleOpenPaymentModal})=> {
             fontWeight:"normal", 
             color:"#999999",
             float: "left", 
-            clear:"both"}}>Last donation {lastDonation} hours ago</div>
+            clear:"both"}}>&ensp;Last donation {lastDonation} hours ago</div>
             <div style = {{float:"left", clear:"both",width:"100%", color:"#444444"}}>
-                <div style = {{float:"left", fontSize:"15px", textAlign:"left"}}><p><span>{daysLeft}</span>Days Left</p></div>
-                <div style = {{float:"right", fontSize:"15px", textAlign:"right"}}><p>{supportersCount} Supporters</p></div>
+                <div style = {{float:"left", fontSize:"15px", textAlign:"left"}}><p><span>&emsp;{daysLeft}</span>Days Left</p></div>
+                <div style = {{float:"right", fontSize:"15px", textAlign:"right"}}><p>{supportersCount} Supporters&emsp;</p></div>
             </div>
         </CardContainer>
     )
