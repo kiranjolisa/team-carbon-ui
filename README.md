@@ -192,6 +192,26 @@ mainly to list the different categories of fundraisers and list them when the bu
 #### Sample Implementation
 -![Sidebar](https://github.com/kiranjolisa/team-carbon-ui/blob/main/readme_imgs/Sidebar.png)
 
+### Modal Box
+
+#### When To Use
+Modal boxes are generally rendered for 2 cases, when the user has to be alerted with some sudden messages for their action or simplify the task or rendering a new page 
+again. For example: Payments are mostly initiated from the gateway owners site but this can be simplified by taking the essential values for payment such as name, card number, cvv etc with the help of modal and then calling and redirecting to an api that tests the correctness of the entry and take adequate actions.
+
+#### How To Use
+```jsx
+    <ModalBox>
+    <ModalBodyDiv>
+    <CloseSpan/>
+    <ModalHeader>Header Sec</ModalHeader>
+      <ModalTextDiv>Something here</ModalTextDiv>
+      <ModalButton>Nothing Happens</ModalButton>
+    </ModalBodyDiv>
+  </ModalBox>
+```
+#### Sample Implementation
+-![Modal Box](https://github.com/kiranjolisa/team-carbon-ui/blob/main/readme_imgs/ModalBox.png)
+
 ## License
 
 MIT © [kiranjolisa](https://github.com/kiranjolisa)
