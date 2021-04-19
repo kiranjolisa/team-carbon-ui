@@ -10,6 +10,8 @@
 npm install --save team-carbon-ui
 ```
 [#NOTE: Dependencies used: styled-components, classnames]
+
+Sample Deployment: https://sample-ui-deployment.vercel.app/
 ## Usage
 
 ```jsx
