@@ -26,44 +26,48 @@ class Example extends Component {
   }
 }
 ```
-# Available Components
-1. Main Button
+## Available Components
+1. Main Button 
 
 
 ![Main Button](https://github.com/kiranjolisa/team-carbon-ui/blob/main/readme_imgs/MainButton.png)
 
-const MainButton = ({children, onClick}) => {
-  return <button className = {styles.MainButton} onClick = {onClick}>{children}</button> 
-}
+```jsx
+  const MainButton = ({children, onClick}) => {
+      return <button className = {styles.MainButton} onClick = {onClick}>{children}</button> 
+  };
+```
 
 2. Loading Spinner
 
 
 ![Big Spinner](https://github.com/kiranjolisa/team-carbon-ui/blob/main/readme_imgs/BigSpinnerLoading.png)
 
-const Spinner = styled.div`
-  animation: ${rotate360} 1s linear infinite;
-  transform: translateZ(0);
+```jsx
+    const Spinner = styled.div`
+    animation: ${rotate360} 1s linear infinite;
+    transform: translateZ(0);
   
-  border-top: 2px solid #b2eceb;
-  border-right: 2px solid #b2eceb;
-  border-bottom: 2px solid #b2eceb;
-  border-left: 4px solid #01bfbd;
-  background: transparent;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin:auto;
-  margin-top:20px;
+    border-top: 2px solid #b2eceb;
+    border-right: 2px solid #b2eceb;
+    border-bottom: 2px solid #b2eceb;
+    border-left: 4px solid #01bfbd;
+    background: transparent;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin:auto;
+    margin-top:20px;
 `;
-
+```
 
 3. Display Card
 
 
 ![Display Card](https://github.com/kiranjolisa/team-carbon-ui/blob/main/readme_imgs/DisplayCard.png)
 
-export const DisplayCard = ({
+```jsx
+    const DisplayCard = ({
     title = "Help Jasper Paul Rescue People Abandoned, Dying On The Streets. Support ‘The Second Chance’",
     imageURL = "https://kettocdn.gumlet.io/media/campaign/342000/342482/image/wid323b78c9f7e9daa2179f02aa6cfffc4dbfbafc29.jpg?w=300",
     achievedPercent = 110, 
@@ -71,7 +75,7 @@ export const DisplayCard = ({
     raisedValue= 123356,
     lastDonation = 7,
     daysLeft = 21,
- supportersCount = 13997,
+    supportersCount = 13997,
     id})=> {
         const extractFirstLetter = (AuthorName) =>{
             let splitNames = AuthorName.split(" ");
@@ -111,72 +115,81 @@ export const DisplayCard = ({
         </CardContainer>
     )
 }
+```
 
 4. Pay Button
 
 
  ![Pay Button](https://github.com/kiranjolisa/team-carbon-ui/blob/main/readme_imgs/PayButton.png)
  
-export const PayButton = styled.button`
-background-color:#01bfbd;
-color:white;
-width:30%;
-height:40px;
-cursor:pointer;
-width:240px;
-margin-left:27%;
-border:none;
-outline:none;
-border-radius:25px;
-font-size:17px;
-padding:10px;
-&:hover{
+```jsx
+    const PayButton = styled.button`
+    background-color:#01bfbd;
+    color:white;
+    width:30%;
+    height:40px;
+    cursor:pointer;
+    width:240px;
+    margin-left:27%;
+    border:none;
+    outline:none;
+    border-radius:25px;
+    font-size:17px;
+    padding:10px;
+    &:hover{
     background-color:#039695;
-}`
+  }`;
+```
+
 
 5. Proceed to Pay Button
 
 
  ![Proceed to Pay Button](https://github.com/kiranjolisa/team-carbon-ui/blob/main/readme_imgs/ProceedToPayButton.png)
  
-const ProceedToPayButton = styled.button`
-background-color:#01bfbd;
-color:white;
-width:22%;
-height:50px;
-cursor:pointer;
-width:270px;
-margin-left:25%;
-border:none;
-outline:none;
-border-radius:25px;
-font-size:17px;
-padding:10px;
-&:hover{
+```jsx
+   const ProceedToPayButton = styled.button`
+   background-color:#01bfbd;
+   color:white;
+   width:22%;
+   height:50px;
+   cursor:pointer;
+   width:270px;
+   margin-left:25%;
+   border:none;
+   outline:none;
+   border-radius:25px;
+   font-size:17px;
+   padding:10px;
+   &:hover{
     background-color:#039695;
-}`
+  }`;
+  ```
 
 6. Payment Success Animation
 
 
 ![Payment Process Success](https://github.com/kiranjolisa/team-carbon-ui/blob/main/readme_imgs/PaymentSuccessAnime.png)
 
-const PaymentSuccessAnime = () => {
+```jsx
+    const PaymentSuccessAnime = () => {
     return(
-     <div className = {cx(styles.o_circle, 
-     styles.c_container__circle, 
-     styles.o_circle__sign_success)}>
-    <div className= {styles.o_circle__sign}></div>  
+        <div className = {cx(styles.o_circle, 
+        styles.c_container__circle, 
+        styles.o_circle__sign_success)}>
+        <div className= {styles.o_circle__sign}></div>  
     </div>   
     )
-}
+  }`;
+```
 
 7. Payment Failure Animation
 
 
 ![Payment Process Failure](https://github.com/kiranjolisa/team-carbon-ui/blob/main/readme_imgs/PaymentFailureAnime.png)
 
-const PaymentFailureAnime = () => {
+```jsx
+  const PaymentFailureAnime = () => {
     return(
         <div className = {cx(styles.o_circle, 
             styles.c_container__circle, 
@@ -184,16 +197,17 @@ const PaymentFailureAnime = () => {
     <div className= {styles.o_circle__sign}></div>  
     </div>
     )
-}
+}`; 
+```
 
 8. Progress Bar
 
 
 ![Progress Bar](https://github.com/kiranjolisa/team-carbon-ui/blob/main/readme_imgs/ProgressBar.png)
 
- const ProgressBar = props => {
+ ```jsx
+    const ProgressBar = props => {
     const { sliderColor, completed } = props;
-  
     const containerStyles = {
       height: 20,
       width: "90%",
@@ -201,7 +215,7 @@ const PaymentFailureAnime = () => {
       borderRadius: 50,
       margin: 50
     };
-  
+    
     const fillerStyles = {
       height: "100%",
       width: `${completed}%`,
@@ -210,6 +224,7 @@ const PaymentFailureAnime = () => {
       borderRadius: "inherit",
       textAlign: "right"
     };
+    
     return (
       <div style={containerStyles}>
         <div style={fillerStyles}>
@@ -217,15 +232,16 @@ const PaymentFailureAnime = () => {
       </div>
     );
   };
+  ```
   
   9. Progress Bar (Thin)
 
 
   ![Progress Bar Thin](https://github.com/kiranjolisa/team-carbon-ui/blob/main/readme_imgs/ProgressBarThin.png)
   
-   const ProgressBarThin = props => {
+   ```jsx
+      const ProgressBarThin = props => {
       const { sliderColor, completed } = props;
-    
       const containerStyles = {
         height: 8,
         width: "95%",
@@ -235,7 +251,6 @@ const PaymentFailureAnime = () => {
         marginTop: 0,
         marginBottom: 0
       };
-    
       const fillerStyles = {
         height: "100%",
         width: `${completed}%`,
@@ -244,54 +259,58 @@ const PaymentFailureAnime = () => {
         borderRadius: "inherit",
         textAlign: "right"
       };
-    
       return (
         <div style={containerStyles}>
           <div style={fillerStyles}>
           </div>
         </div>
       );
-    };
+    }; 
+  ```
    
    10. Loading Spinner (Small)
 
 
    ![Loading Spinner Small Size](https://github.com/kiranjolisa/team-carbon-ui/blob/main/readme_imgs/SmallSpinnerLoading.png)
    
-   export const SmallSpinner = styled.div`
-  animation: ${rotate360} 2s linear infinite;
-  transform: translateZ(0);
+  ```jsx
+    const SmallSpinner = styled.div`
+    animation: ${rotate360} 2s linear infinite;
+    transform: translateZ(0);
 
-  border-top: 2px solid #b2eceb;
-  border-right: 2px solid #b2eceb;
-  border-bottom: 2px solid #b2eceb;
-  border-left: 4px solid #01bfbd;
-  background: transparent;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin:auto;
-  margin-top:20px;
-`;
+    border-top: 2px solid #b2eceb;
+    border-right: 2px solid #b2eceb;
+    border-bottom: 2px solid #b2eceb;
+    border-left: 4px solid #01bfbd;
+    background: transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin:auto;
+    margin-top:20px;
+  `;
+  ```
 
 11. Sidebar 
 
 
 ![Sidebar](https://github.com/kiranjolisa/team-carbon-ui/blob/main/readme_imgs/Sidebar.png)
 
-   const SideBar = ({ heading = 'CATEGORIES',children, width ='20vw', 
-background = "#f5f5f5", padding = "20px", borderRadius = '8px'}) => {
-    return(
-    <div style = {{width: width, backgroundColor:background, padding:padding, borderRadius:borderRadius}}>
+   ```jsx
+      const SideBar = ({ heading = 'CATEGORIES',children, width ='20vw', 
+      background = "#f5f5f5", padding = "20px", borderRadius = '8px'}) => {
+      return(
+      <div style = {{width: width, backgroundColor:background, padding:padding, borderRadius:borderRadius}}>
         <SideBarHeading>{heading}</SideBarHeading>
         {children} //Sidebar items
     </div>)
-}
-const SideBarItem = ({children}) => {
+    }
+    const SideBarItem = ({children}) => {
     return(<ul>{children.map((item) => (
         <StyledLi>{item}</StyledLi>
     ))}</ul>)
-}
+    };
+ ```
    
 
 ## License
