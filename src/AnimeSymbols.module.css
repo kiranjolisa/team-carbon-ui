@@ -148,8 +148,3 @@
       @Media Queries
   +++++++++++++++++++++*/
   
-  @media screen and (min-width: 1300px) {
-    
-    HTML { font-size: 1.5625em; } /* 25 / 16 = 1.5625 */
-    
-  }
