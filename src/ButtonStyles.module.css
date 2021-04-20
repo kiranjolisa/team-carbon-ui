@@ -1,0 +1,30 @@
+.secondary{
+    background-color: black;
+    background-color:#01bfbd;
+    color:white;
+    cursor:pointer;
+    border:none;
+    outline:none;
+    border-radius:25px;
+    font-size:17px;
+    padding:10px; 
+    }
+
+.primary{
+    background-color:#01bfbd;
+    color:white;
+    width:22%;
+    height:50px;
+    cursor:pointer;
+    width:270px;
+    margin-left:25%;
+    border:none;
+    outline:none;
+    border-radius:25px;
+    font-size:17px;
+    padding:10px;
+}
+
+.primary:hover, .secondary:hover{
+    background-color:#039695;
+}

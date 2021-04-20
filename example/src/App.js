@@ -18,7 +18,8 @@ import {
   ModalTextDiv, 
   CloseSpan,
   SideBar,
-  SideBarItem } from 'team-carbon-ui'
+  SideBarItem,
+  Button } from 'team-carbon-ui'
 import 'team-carbon-ui/dist/index.css'
 
 const App = () => {
@@ -76,6 +77,8 @@ React.useEffect(() => {
   <SideBar>
   <SideBarItem children = {["Item1", "Item2", "Item3", "Item4"]} />
   </SideBar>
+  <Button type = "secondary" onClick= {()=> {alert('user has clicked secondary button now')}}>Secondary</Button>
+  <Button type = "primary" onClick= {()=> {alert('user has clicked primary button now')}} >Primary</Button>
   </>));
 }
 
