@@ -212,6 +212,19 @@ again. For example: Payments are mostly initiated from the gateway owners site b
 #### Sample Implementation
 -![Modal Box](https://github.com/kiranjolisa/team-carbon-ui/blob/main/readme_imgs/ModalBox.png)
 
+### Buttons (Different implementation)
+These buttons are very similar to the above mentioned buttons, the only difference is in their implementation.
+
+#### How To Use
+```jsx
+  <Button type = "secondary" onClick= {()=> {alert('user has clicked secondary button now')}}>Secondary</Button>
+  <Button type = "primary" onClick= {()=> {alert('user has clicked primary button now')}} >Primary</Button>
+```
+
+#### Sample Implementation
+-![Primary Button](https://github.com/kiranjolisa/team-carbon-ui/blob/main/readme_imgs/primaryButton.png)
+-![Secondary Button](https://github.com/kiranjolisa/team-carbon-ui/blob/main/readme_imgs/secondaryButton.png)
+
 ## License
 
 MIT © [kiranjolisa](https://github.com/kiranjolisa)
